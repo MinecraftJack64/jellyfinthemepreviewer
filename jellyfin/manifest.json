@@ -1,0 +1,26 @@
+{
+  "name": "Jellyfin theme previewer",
+  "manifest_version": 3,
+  "version": "0.2",
+  
+  "content_scripts": [
+    {
+      "all_frames": true,
+            "matches": [
+                "<all_urls>"
+            ],
+      "run_at": "document_idle",
+      "js": ["myscript.js"]
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["myscript.js"],
+    "matches": ["<all_urls>"],
+    "extension_ids": ["blhnpgkknljaoelmjaejefackhdpkjok"],
+    "use_dynamic_url":false
+   }]
+}
